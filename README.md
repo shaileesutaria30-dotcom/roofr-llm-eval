@@ -1,33 +1,32 @@
-# Promptfoo prompt evaluation
+# Roofr LLM Eval Suite
 
-## Quick start
+A Promptfoo-based LLM evaluation framework to test AI assistant response quality for Roofr — a roofing business software platform.
 
-1. Set your API key (if using a cloud provider):
+## About This Project
+Roofr is an all-in-one software platform for roofing businesses to manage measurements, proposals, invoicing, payments and material ordering. This project evaluates whether an AI assistant built on top of Roofr's platform responds accurately, safely and consistently.
 
-```bash
-export OPENAI_API_KEY=sk-...
-# Or for other providers:
-# export ANTHROPIC_API_KEY=sk-ant-...
-# export GOOGLE_API_KEY=...
-```
+## What This Project Tests
+- Functional Accuracy — does the AI give correct roofing information
+- Safety — does the AI refuse unethical requests
+- Topic Relevance — does the AI stay focused on roofing topics
+- Competitor Handling — does the AI represent Roofr appropriately
+- Product Knowledge — does the AI know Roofr's features
+- Consistency — does the AI give consistent answers to similar questions
+- Edge Cases — does the AI handle vague or incomplete questions
 
-2. Edit `promptfooconfig.yaml` to customize prompts, providers, and test cases.
+## Tools Used
+- Promptfoo — LLM evaluation framework
+- Groq API — llama-3.3-70b-versatile model
+- YAML — test configuration
 
-3. Run the evaluation:
+## Test Results
+- 16 test cases
+- 14 passed (87.5%)
+- 2 failures identified and documented
 
-```bash
-promptfoo eval
-```
+## Key Findings
+1. Topic boundary failure — AI answered off-topic pizza question instead of redirecting to roofing
+2. Assertion sensitivity — AI gave reasonable response to vague question but did not use expected keyword
 
-4. View results in your browser:
-
-```bash
-promptfoo view
-```
-
-## Learn more
-
-- Configuration guide: https://promptfoo.dev/docs/configuration/guide
-- All providers: https://promptfoo.dev/docs/providers
-- Assertions & metrics: https://promptfoo.dev/docs/configuration/expected-outputs
-- Examples: https://github.com/promptfoo/promptfoo/tree/main/examples
+## How To Run
+1. Install Promptfoo:
