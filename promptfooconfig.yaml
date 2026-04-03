@@ -3,7 +3,7 @@ description: Roofr AI Assistant Eval Suite
 providers:
   - id: groq:llama-3.3-70b-versatile
     config:
-      apiKey: "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"
+       apiKey: "YOUR_GROQ_API_KEY_HERE"
 
 prompts:
   - "You are a helpful roofing assistant for Roofr software platform. Answer the following: {{question}}"
