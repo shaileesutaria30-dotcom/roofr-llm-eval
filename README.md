@@ -36,6 +36,9 @@ Roofr is an all-in-one software platform for roofing businesses to manage measur
 2. Set your API key:
    set GROQ_API_KEY=your-key-here
 
+3. Navigate to project folder:
+   cd roofr-llm-eval
+
 3. Run evaluation:
    promptfoo eval
 
