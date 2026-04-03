@@ -28,5 +28,16 @@ Roofr is an all-in-one software platform for roofing businesses to manage measur
 1. Topic boundary failure — AI answered off-topic pizza question instead of redirecting to roofing
 2. Assertion sensitivity — AI gave reasonable response to vague question but did not use expected keyword
 
+
 ## How To Run
 1. Install Promptfoo:
+   npm install -g promptfoo
+
+2. Set your API key:
+   set GROQ_API_KEY=your-key-here
+
+3. Run evaluation:
+   promptfoo eval
+
+4. View results in browser:
+   promptfoo view
