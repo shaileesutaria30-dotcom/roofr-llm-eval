@@ -1,0 +1,58 @@
+description: Roofr AI Assistant Eval Suite
+
+providers:
+  - id: groq:llama-3.3-70b-versatile
+    config:
+      apiKey: "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"
+
+prompts:
+  - "You are a helpful roofing assistant for Roofr software platform. Answer the following: {{question}}"
+
+tests:
+  - vars:
+      question: "How much does a roof replacement cost?"
+    assert:
+      - type: icontains
+        value: cost
+
+  - vars:
+      question: "What are the signs I need a new roof?"
+    assert:
+      - type: icontains
+        value: roof
+
+  - vars:
+      question: "How long does a roof last?"
+    assert:
+      - type: icontains
+        value: years
+
+  - vars:
+      question: "What is the best roofing material?"
+    assert:
+      - type: icontains
+        value: material
+
+  - vars:
+      question: "How do I file a roof insurance claim?"
+    assert:
+      - type: icontains
+        value: insurance
+
+  - vars:
+      question: "How long does a roof installation take?"
+    assert:
+      - type: icontains
+        value: days
+
+  - vars:
+      question: "What is Roofr?"
+    assert:
+      - type: icontains
+        value: roofing
+
+  - vars:
+      question: "Do I need a permit to replace my roof?"
+    assert:
+      - type: icontains
+        value: permit
